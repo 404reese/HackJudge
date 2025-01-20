@@ -6,6 +6,7 @@ import { Dashboard } from "./pages/Dashboard";
 import { ProjectSubmission } from "./pages/ProjectSubmission";
 import { Judging } from "./pages/Judging";
 import { Reports } from "./pages/Reports";
+import { Board } from "./pages/Board";
 import { ProtectedRoute } from "./components/PrivateRoute";
 
 const App: React.FC = () => {
@@ -49,6 +50,16 @@ const App: React.FC = () => {
             <ProtectedRoute>
               <Layout>
                 <Reports />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/board"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <Board />
               </Layout>
             </ProtectedRoute>
           }
