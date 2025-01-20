@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Trophy, Clock } from 'lucide-react';
 
 export function Board () {
   return (
-    <div className="min-h-screen bg-white text-gray-900 p-8">
+    <div className="min-h-screen bg-no-repeat bg-center bg-cover">
+        <div className="align-middle text-center text-4xl text-gray-800">
+          <h1 className="font-minecraft">LEADERBOARD</h1>
+        </div>
+        
       {/* Podium */}
       <div className="max-w-6xl mx-auto mb-12 mt-16">
         <div className="flex items-end justify-center space-x-8">
@@ -69,7 +73,7 @@ export function Board () {
             <div>Score</div>
             <div className="text-right">Domain</div>
           </div>
-          {[4, 5, 6].map((place) => (
+          {[4, 5, 6, 7].map((place) => (
             <div
               key={place}
               className="grid grid-cols-4 px-6 py-4 border-t border-gray-300"
