@@ -1,65 +1,60 @@
 import React from "react";
-import { Trophy, Clock } from 'lucide-react';
+import { Trophy } from 'lucide-react';
+import { FaRegStar } from "react-icons/fa";
 
-export function Board () {
+export function Board() {
   return (
     <div className="min-h-screen bg-no-repeat bg-center bg-cover">
-        <div className="align-middle text-center text-4xl text-gray-800">
-          <h1 className="font-minecraft">LEADERBOARD</h1>
-        </div>
+      <div className="align-middle text-center text-4xl text-gray-800">
+        <h1 className="font-minecraft">LEADERBOARD</h1>
+      </div>
         
       {/* Podium */}
       <div className="max-w-6xl mx-auto mb-12 mt-16">
         <div className="flex items-end justify-center space-x-8">
           {/* Second Place */}
-          <div className="text-center mb-8">
-            <div className="w-24 h-24 bg-gray-200 rounded-2xl mb-4 flex items-center justify-center text-4xl text-gray-700">
-              🎮
+          <div className="text-center mb-8 opacity-0 scale-95 animate-fade-up animate-delay-200ms">
+            <div className="flex items-center justify-center p-4 bg-gray-200 rounded-2xl mb-4">
+              <img src="/2.webp" alt="Second Place" className="h-16 w-16 object-cover rounded-full" />
             </div>
             <div className="text-lg font-semibold mb-2 text-gray-800">Skulldugger</div>
             <div className="bg-gray-100 rounded-lg p-3 mb-2">
-              <Trophy className="w-5 h-5 mx-auto mb-1 text-yellow-500" />
+              <div className="flex justify-center mb-1">
+                <FaRegStar className="w-5 h-5 text-yellow-500" />
+                {/* <FaRegStar className="w-5 h-5 text-yellow-500" /> */}
+              </div>
               <div className="text-sm text-gray-500">Score: 500</div>
             </div>
-            <div className="flex items-center justify-center text-blue-500">
-              <Trophy className="w-4 h-4 mr-1" />
-              <span>Score: 5 000</span>
-            </div>
-            <div className="text-xs text-gray-500">Domain: AI/ML</div>
           </div>
 
           {/* First Place */}
-          <div className="text-center mb-12 -mt-8">
-            <div className="w-32 h-32 bg-gray-200 rounded-2xl mb-4 flex items-center justify-center text-5xl text-gray-700">
-              👾
+          <div className="text-center mb-12 -mt-8 opacity-0 scale-95 animate-fade-up animate-delay-400ms">
+            <div className="flex items-center justify-center p-4 bg-gray-200 rounded-2xl mb-4">
+              <img src="/1.webp" alt="First Place" className="h-28 w-28 object-cover rounded-full" />
             </div>
             <div className="text-xl font-semibold mb-2 text-gray-800">Klaxxon</div>
             <div className="bg-gray-100 rounded-lg p-3 mb-2">
-              <Trophy className="w-5 h-5 mx-auto mb-1 text-yellow-500" />
+              <div className="flex justify-center mb-1">
+                <FaRegStar className="w-5 h-5 text-yellow-500" />
+                {/* <FaRegStar className="w-5 h-5 text-yellow-500" />
+                <FaRegStar className="w-5 h-5 text-yellow-500" /> */}
+              </div>
               <div className="text-sm text-gray-500">Score: 1500</div>
             </div>
-            <div className="flex items-center justify-center text-blue-500">
-              <Trophy className="w-4 h-4 mr-1" />
-              <span>Score: 10 000</span>
-            </div>
-            <div className="text-xs text-gray-500">Domain: Web Dev</div>
           </div>
 
           {/* Third Place */}
-          <div className="text-center mb-8">
-            <div className="w-24 h-24 bg-gray-200 rounded-2xl mb-4 flex items-center justify-center text-4xl text-gray-700">
-              💀
+          <div className="text-center mb-8 opacity-0 scale-95 animate-fade-up animate-delay-600ms">
+            <div className="flex items-center justify-center p-4 bg-gray-200 rounded-2xl mb-4">
+              <img src="/3.webp" alt="Third Place" className="h-16 w-16 object-cover rounded-full" />
             </div>
             <div className="text-lg font-semibold mb-2 text-gray-800">Ultralex</div>
             <div className="bg-gray-100 rounded-lg p-3 mb-2">
-              <Trophy className="w-5 h-5 mx-auto mb-1 text-yellow-500" />
+              <div className="flex justify-center mb-1">
+                <FaRegStar className="w-5 h-5 text-yellow-500" />
+              </div>
               <div className="text-sm text-gray-500">Score: 250</div>
             </div>
-            <div className="flex items-center justify-center text-blue-500">
-              <Trophy className="w-4 h-4 mr-1" />
-              <span>Score: 2 500</span>
-            </div>
-            <div className="text-xs text-gray-500">Domain: Data Science</div>
           </div>
         </div>
       </div>
@@ -67,24 +62,22 @@ export function Board () {
       {/* Leaderboard Table */}
       <div className="max-w-6xl mx-auto">
         <div className="bg-gray-100 rounded-lg">
-          <div className="grid grid-cols-4 px-6 py-3 text-sm text-gray-500">
+          <div className="grid grid-cols-3 px-6 py-3 text-sm text-gray-500">
             <div>Place</div>
             <div>Teamname</div>
-            <div>Score</div>
-            <div className="text-right">Domain</div>
+            <div className="text-right">Score</div>
           </div>
-          {[4, 5, 6, 7].map((place) => (
+          {[4, 5, 6, 7].map((place, index) => (
             <div
               key={place}
-              className="grid grid-cols-4 px-6 py-4 border-t border-gray-300"
+              className={`grid grid-cols-3 px-6 py-4 border-t border-gray-300 opacity-0 animate-slide-up animate-delay-${(index + 1) * 200}ms`}
             >
               <div className="flex items-center">
                 <Trophy className="w-4 h-4 text-blue-400 mr-2" />
                 {place}
               </div>
               <div>Protesian</div>
-              <div>156</div>
-              <div className="text-right text-blue-500">AI/ML</div>
+              <div className="text-right text-blue-500">156</div>
             </div>
           ))}
         </div>
@@ -92,3 +85,4 @@ export function Board () {
     </div>
   );
 }
+
