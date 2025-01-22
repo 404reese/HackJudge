@@ -46,7 +46,7 @@ export function Board() {
           {/* Third Place */}
           <div className="text-center mb-8 opacity-0 scale-95 animate-fade-up animate-delay-600ms">
             <div className="flex items-center justify-center p-4 bg-gray-200 rounded-2xl mb-4">
-              <img src="/3.webp" alt="Third Place" className="h-16 w-16 object-cover rounded-full" />
+              <img src="/iron.png" alt="Third Place" className="h-16 w-16 object-cover rounded-full" />
             </div>
             <div className="text-lg font-semibold mb-2 text-gray-800">Ultralex</div>
             <div className="bg-gray-100 rounded-lg p-3 mb-2">
