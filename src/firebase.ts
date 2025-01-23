@@ -5,13 +5,14 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDWK8LHTIAPcNe-NPmHEs6ANxS6sWh0uEk",
-  authDomain: "hackjudge-knowcode.firebaseapp.com",
-  projectId: "hackjudge-knowcode",
-  storageBucket: "hackjudge-knowcode.firebasestorage.app",
-  messagingSenderId: "669229869517",
-  appId: "1:669229869517:web:599ad09865ea6887f63c84",
+  apiKey: "AIzaSyBg2STmAblLlasomCu9dhXqsFCmwdQH9zg",
+  authDomain: "knowcode-2-0.firebaseapp.com",
+  projectId: "knowcode-2-0",
+  storageBucket: "knowcode-2-0.firebasestorage.app",
+  messagingSenderId: "426078506744",
+  appId: "1:426078506744:web:2fb7b76d7927741f7eb50d"
 };
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
